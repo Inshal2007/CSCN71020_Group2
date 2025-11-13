@@ -47,18 +47,52 @@ int printShapeMenu() {
 	printf_s("0. Exit\n");
 
 	int shapeChoice;
+	int inputResult;
+	char buffer[100];
 
 	printf_s("Enter number: ");
-	scanf_s("%1o", &shapeChoice);
+
+	do {
+		inputResult = scanf_s("%d", &shapeChoice);
+
+		if (inputResult != 1) {
+			printf_s("Invalid input. Please enter 0 or 1: ");
+			scanf_s("%99s", buffer, (unsigned)sizeof(buffer));
+			inputResult = 0;
+		}
+		else if (shapeChoice != 0 && shapeChoice != 1) {
+			printf_s("Please enter 0 or 1 only: ");
+			inputResult = 0;
+		}
+	} while (inputResult != 1);
 
 	return shapeChoice;
 }
 
 int* getTriangleSides(int* triangleSides) {
-	printf_s("Enter the three sides of the triangle: ");
+	printf_s("Enter the three sides of the triangle: \n");
+
 	for (int i = 0; i < 3; i++)
 	{
-		scanf_s("%d", &triangleSides[i]);
+		printf_s("Enter side %d: ", i + 1);
+
+		int inputResult;
+		char buffer[100];
+
+		do {
+			inputResult = scanf_s("%d", &triangleSides[i]);
+
+			if (inputResult != 1) {
+				printf_s("Invalid input. Please enter a positive number: ");
+				scanf_s("%99s", buffer, (unsigned)sizeof(buffer));
+				inputResult = 0;
+			}
+			else if (triangleSides[i] <= 0) {
+				printf_s("Side length must be positive. Please enter a positive number: ");
+				inputResult = 0;
+			}
+		} while (inputResult != 1);
 	}
+
 	return triangleSides;
 }
