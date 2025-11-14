@@ -6,18 +6,18 @@
 char* analyzeTriangle(int side1, int side2, int side3) {
 	char* result = "";
 	if (side1 <= 0 || side2 <= 0 || side3 <= 0) {
-		result = "\n It not a Triangle";
+		result = "Not a Triangle";
 	}
 	else if (side1 == side2 && side1 == side3) {
-		result = "\n It is Equilateral triangle";
+		result = "Equilateral triangle";
 	}
 	else if ((side1 == side2 && side1 != side3) || 
 		(side1 == side3 && side1 != side2))
 	{
-		result = "\n It is Isosceles triangle";
+		result = "Isosceles triangle";
 	}
 	else {
-		result = "\n It is Scalene triangle";
+		result = "Scalene triangle";
 	}
 
 	return result;
