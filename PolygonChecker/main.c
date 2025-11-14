@@ -34,8 +34,6 @@ int main() {
 			// Analyze the triangle with the three side lengths provided by user
 			char* result = analyzeTriangle(triangleSidesPtr[0], triangleSidesPtr[1], triangleSidesPtr[2]);
 			
-			printf_s("%s\n", result);
-			
 			// Only calculate and display angles if it's a valid triangle (all sides positive)
 			
 			if (triangleSidesPtr[0] > 0 && triangleSidesPtr[1] > 0 && triangleSidesPtr[2] > 0) {
@@ -46,8 +44,15 @@ int main() {
 				calculateTriangleAngles(triangleSidesPtr[0], triangleSidesPtr[1], triangleSidesPtr[2], &angle1, &angle2, &angle3);
 				// Display the calculated angles to the user
 				
-				printf_s("Triangle Angles: %.2f degree, %.2f degree, %.2f degree\n", angle1, angle2, angle3);
+				printf_s("\n=== Triangle Analysis ===\n");
+				printf_s("Type: %s\n", result);
+				printf_s("Angles: %.0f degree, %.0f degree, %.0f degree\n", angle1, angle2, angle3);
+				printf_s("=== End Analysis ===\n");
+			} 
+			else {
+				printf_s("\n%s\n", result);
 			}
+
 			break;
 		
 		case 0:
