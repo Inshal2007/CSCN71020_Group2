@@ -47,6 +47,11 @@ int main() {
 				printf_s("\n=== Triangle Analysis ===\n");
 				printf_s("Type: %s\n", result);
 				printf_s("Angles: %.0f degree, %.0f degree, %.0f degree\n", angle1, angle2, angle3);
+				
+				// Add angle-based classification
+				char* angleType = classifyTriangleByAngles(angle1, angle2, angle3);
+				printf_s("Angle Classification: %s Triangle\n", angleType);
+				
 				printf_s("=== End Analysis ===\n");
 			} 
 			else {
