@@ -3,25 +3,25 @@
 ## Project Overview
 This is our group project for the CSCN71020 Software Implementation and Unit Testing course. We are enhancing a base polygon checker application by adding new features and implementing comprehensive unit tests.
 
-## Current Status - Week 2
-We are currently working on improving the triangle analysis features and preparing for rectangle functionality development.
+## Current Status - Week 3
+We are currently starting rectangle feature development after completing all triangle functionality.
 
 ## Completed Features
-- Basic triangle type detection (Equilateral, Isosceles, Scalene)
-- Simple menu system for user interaction
-- Project repository setup and team collaboration
+- Complete triangle analysis system (type detection + angle calculations)
+- Robust input validation to prevent program crashes
+- Professional output formatting with clean display
+- Advanced angle classification (Acute, Right-angled, Obtuse)
+- Project repository setup and team collaboration workflow
 
-## In Progress - Triangle Features
-- Input validation to prevent program crashes
-- Separate line input for triangle sides
-- Interior angle calculations for valid triangles
-- Comprehensive unit test coverage
+## In Progress - Rectangle Features
+- Four-point coordinate input system with validation
+- Smart corner detection algorithm (second approach for extra marks)
+- Rectangle validation with perimeter and area calculations
+- Professional output display for rectangle analysis
 
-## Planned Features - Rectangle Module
-- Four-point coordinate input system
-- Rectangle validation algorithms
-- Perimeter and area calculations
-- Advanced point ordering for extra marks
+## Planned Features
+- Comprehensive unit test suite for all functionality
+- Code documentation and final project polish
 
 ## Team Workflow
 Each team member works on their own feature branches. We follow a systematic approach:
@@ -31,16 +31,13 @@ Each team member works on their own feature branches. We follow a systematic app
 4. Create pull requests for code review
 5. Merge approved changes to main branch
 
-## Getting Started
-Clone the repository and open the solution in Visual Studio 2022. Build the project using C99 standard and run with Ctrl+F5. Follow the on-screen prompts to test triangle functionality.
-
 ## Testing Strategy
-We are using Microsoft C++ Native Unit Test Framework with Test-Driven Development approach. Current test coverage includes triangle validation, type identification, and edge cases.
+We are using Microsoft C++ Native Unit Test Framework with Test-Driven Development approach. Comprehensive test coverage will be implemented for all features.
 
 ## Project Timeline
-- Week 1: Project setup and initial repository configuration
-- Week 2: Triangle feature enhancements and input validation
-- Week 3: Rectangle feature implementation
+- Week 1: Project setup and repository configuration
+- Week 2: Triangle feature implementation and enhancements
+- Week 3: Rectangle feature development
 - Week 4: Comprehensive testing and final documentation
 
 ## Contact
