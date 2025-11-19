@@ -92,6 +92,7 @@ void printWelcome() {
 
 int printShapeMenu() {
 	printf_s("1. Triangle\n");
+	printf_s("2. Rectangle\n");
 	printf_s("0. Exit\n");
 
 	int shapeChoice;
@@ -105,14 +106,14 @@ int printShapeMenu() {
 		inputResult = scanf_s("%d", &shapeChoice);
 
 		if (inputResult != 1) {
-			
+
 			// Inform user of invalid input and prompt again
 			printf_s("Invalid input. Please enter 0 or 1: ");
 			scanf_s("%99s", buffer, (unsigned)sizeof(buffer));
 			inputResult = 0;
 		}
 		// Check if user entered a number that's not 0 or 1
-		else if (shapeChoice != 0 && shapeChoice != 1) {
+		else if (shapeChoice != 0 && shapeChoice != 1 && shapeChoice != 2) {
 			printf_s("Please enter 0 or 1 only: ");
 			inputResult = 0;
 		}
