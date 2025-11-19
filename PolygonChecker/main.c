@@ -44,24 +44,25 @@ int main() {
 				calculateTriangleAngles(triangleSidesPtr[0], triangleSidesPtr[1], triangleSidesPtr[2], &angle1, &angle2, &angle3);
 				// Display the calculated angles to the user
 				
-				printf_s("\n + ---------------------------- + \n");
-				printf_s("|      TRIANGLE ANALYSIS     |\n");
-				printf_s("+----------------------------+\n");
-				printf_s("| Type: %-19s |\n", result);
-				printf_s("| Angles: %-3.0f, %-3.0f, %-3.0f      |\n", angle1, angle2, angle3);
+				printf_s("\n+==============================+\n");
+				printf_s("|       TRIANGLE ANALYSIS      |\n");
+				printf_s("+==============================+\n");
+				printf_s("| Type: %-21s |\n", result);
+				printf_s("| Angles: %-3.0f, %-3.0f, %-3.0f         |\n", angle1, angle2, angle3);
 
-				// Add angle-based classification
+				
+				//Add angle based qualification
+				
 				char* angleType = classifyTriangleByAngles(angle1, angle2, angle3);
-				printf_s("| Angle Type: %-16s |\n", angleType);
-
-				printf_s("+----------------------------+\n");
+				printf_s("| Classification: %-12s |\n", angleType);
+				printf_s("+==============================+\n");
 			} 
 			else {
-				printf_s("\n+----------------------------+\n");
-				printf_s("|      TRIANGLE ANALYSIS     |\n");
-				printf_s("+----------------------------+\n");
-				printf_s("| %-26s |\n", result);
-				printf_s("+----------------------------+\n");
+				printf_s("\n+==============================+\n");
+				printf_s("|       TRIANGLE ANALYSIS      |\n");
+				printf_s("+==============================+\n");
+				printf_s("| %-28s |\n", result);
+				printf_s("+==============================+\n");
 			}
 
 			break;
