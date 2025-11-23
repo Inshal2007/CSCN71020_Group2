@@ -105,6 +105,7 @@ namespace polygonCheckerOutcomes
 
 		}//(6)
 
+		//Testing side lengths with values (-0, -0, -0)
 		TEST_METHOD(AnalyzeTriangleFunction_AnalyzeTriangleType_NotATriangleUndefinedSidesResult)
 		{
 			//Decleration
@@ -122,56 +123,56 @@ namespace polygonCheckerOutcomes
 		//The following 6 test methods test the calculateTriangle() function=----------------------------=
 		//TEST_METHOD(CalculateTriangleAnglesFunction_TriangleAnglesDetermination_606060AnglesEquilateralCase)
 		//{
-		//}//(7)
+		//}//(8)
 
 		//TEST_METHOD(CalculateTriangleAnglesFunction_TriangleAnglesDetermination_806060AnglesIsoscelesCase)
 		//{
-		//}//(8)
+		//}//(9)
 
 		//TEST_METHOD(CalculateTriangleAnglesFunction_TriangleAnglesDetermination_1050120AnglesScaleneCase)
 		//{
-		//}//(9)
+		//}//(10)
 
 		//TEST_METHOD(CalculateTriangleAnglesFunction_TriangleAnglesDetermination_000AnglesCase)
 		//{
-		//}//(10)
+		//}//(11)
 
 		//TEST_METHOD(CalculateTriangleAnglesFunction_TriangleAnglesDetermination_NegtaiveAnglesCase)
 		//{
-		//}//(11)
+		//}//(12)
 
 		//TEST_METHOD(CalculateTriangleAnglesFunction_TriangleAnglesDetermination_UndefinedAnglesCase)
 		//{
-		//}//(12)
+		//}//(13)
 
 		//The following 6 test methods test the classifyTriangleByAngles() function=----------------------------=
 		//TEST_METHOD(ClasifyTriangleByAnglesFunction_TriangleByAngles_Less90AcuteTriangle)
 		//{
-		//}//(13)
+		//}//(14)
 
 		///TEST_METHOD(CalculateTriangleAnglesFunction_TriangleAnglesDetermination_Greater90ObtuseTriangle)
 		//{
-		//}//(14)
+		//}//(15)
 
 		//TEST_METHOD(CalculateTriangleAnglesFunction_TriangleAnglesDetermination_Equal90RightTriangle)
 		//{
-		//}//(15)
+		//}//(16)
 
 		//TEST_METHOD(CalculateTriangleAnglesFunction_TriangleAnglesDetermination_AllZeroAnglesNoTriangle)
 		//{
-		//}//(16)
+		//}//(17)
 
 		//TEST_METHOD(CalculateTriangleAnglesFunction_TriangleAnglesDetermination_UndefinedAnglesNoTriangle)
 		//{
-		//}//(17)
+		//}//(18)
 
 		//TEST_METHOD(CalculateTriangleAnglesFunction_TriangleAnglesDetermination_NegativeAnglesNoTriangle)
 		//{
-		//}//(18)
+		//}//(19)
 
 		//TEST_METHOD(CalculateTriangleAnglesFunction_TriangleAnglesDetermination_NegativeZeroAnglesNoTriangle)
 		//{
-		//}//(19)
+		//}//(20)
 
 	};
 
