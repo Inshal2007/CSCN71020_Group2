@@ -27,9 +27,18 @@ namespace polygonCheckerOutcomes
 			Assert::AreEqual("Not a Triangle", result);
 		}//(1)
 
-		//TEST_METHOD(AnalyzeTriangleFunction_AnalyzeTriangleType_EquilateralTriangleResult)
-		//{
-		//}//(2)
+		TEST_METHOD(AnalyzeTriangleFunction_AnalyzeTriangleType_EquilateralTriangleResult)
+		{
+		    //Decleration
+			int side1 = 10;
+			int side2 = 10;
+			int side3 = 10;
+			char* result;
+
+			//Calculations and Comparison
+			result = analyzeTriangle(side1, side2, side3);
+			Assert::AreEqual("Equilteral", result);
+		}//(2)
 
 		//TEST_METHOD(AnalyzeTriangleFunction_AnalyzeTriangleType_IsoscelesTriangleResult)
 		//{
