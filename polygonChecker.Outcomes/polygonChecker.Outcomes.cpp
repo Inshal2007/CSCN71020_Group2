@@ -14,6 +14,8 @@ namespace polygonCheckerOutcomes
 	public:
 		
 		//The following 6 test methods test the analyzeTriangle() function=----------------------------=
+
+		//Testing side lengths with values (0, 0, 0)
 		TEST_METHOD(AnalyzeTriangleFunction_AnalyzeTriangleType_NotATriangleResult) 
 		{
 			//Decleration
@@ -27,6 +29,7 @@ namespace polygonCheckerOutcomes
 			Assert::AreEqual("Not a Triangle", result);
 		}//(1)
 
+		//Testing side lengths with values (10, 10, 10)
 		TEST_METHOD(AnalyzeTriangleFunction_AnalyzeTriangleType_EquilateralTriangleResult)
 		{
 		    //Decleration
