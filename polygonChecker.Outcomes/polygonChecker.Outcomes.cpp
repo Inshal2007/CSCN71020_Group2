@@ -14,83 +14,165 @@ namespace polygonCheckerOutcomes
 	public:
 		
 		//The following 6 test methods test the analyzeTriangle() function=----------------------------=
-		TEST_METHOD(AnalyzeTriangleFunction_AnalyzeTriangleType_NotATriangleResult)
-		{
-		}
 
+		//Testing side lengths with values (0, 0, 0)
+		TEST_METHOD(AnalyzeTriangleFunction_AnalyzeTriangleType_NotATriangleResult) 
+		{
+			//Decleration
+			int side1 = 0;
+			int side2 = 0;
+			int side3 = 0;
+			char* result;
+
+			//Calculations and Comparison
+			result = analyzeTriangle(side1, side2, side3);
+			Assert::AreEqual("Not a Triangle", result);
+
+		}//(1)
+
+		//Testing side lengths with values (10, 10, 10)
 		TEST_METHOD(AnalyzeTriangleFunction_AnalyzeTriangleType_EquilateralTriangleResult)
 		{
-		}
+		    //Decleration
+			int side1 = 10;
+			int side2 = 10;
+			int side3 = 10;
+			char* result;
 
+			//Calculations and Comparison
+			result = analyzeTriangle(side1, side2, side3);
+			Assert::AreEqual("Equilateral triangle", result);
+
+		}//(2)
+
+		//Testing side lengths with values (10, 10, 8)
 		TEST_METHOD(AnalyzeTriangleFunction_AnalyzeTriangleType_IsoscelesTriangleResult)
 		{
-		}
+			//Decleration
+			int side1 = 10;
+			int side2 = 10;
+			int side3 = 8;
+			char* result;
 
+			//Calculations and Comparison
+			result = analyzeTriangle(side1, side2, side3);
+			Assert::AreEqual("Isosceles triangle", result);	 
+
+		}//(3)
+
+		//Testing side lengths with values (24, 10, 8)
 		TEST_METHOD(AnalyzeTriangleFunction_AnalyzeTriangleType_ScaleneTriangleResult)
 		{
-		}
+			//Decleration
+			int side1 = 25;
+			int side2 = 10;
+			int side3 = 8;
+			char* result;
 
+			//Calculations and Comparison
+			result = analyzeTriangle(side1, side2, side3);
+			Assert::AreEqual("Scalene triangle", result);
+
+		}//(4)
+
+		//Testing side lengths with values (24, 10, 8)
 		TEST_METHOD(AnalyzeTriangleFunction_AnalyzeTriangleType_NotATriangleNegativeSidesResult)
 		{
-		}
+			//Decleration
+			int side1 = -5;
+			int side2 = -10;
+			int side3 = 8;
+			char* result;
 
+			//Calculations and Comparison
+			result = analyzeTriangle(side1, side2, side3);
+			Assert::AreEqual("Not a Triangle", result);
+
+		}//(5)
+
+		//Testing side lengths with values (9999, 1, 9999)
 		TEST_METHOD(AnalyzeTriangleFunction_AnalyzeTriangleType_NotATriangleBoundarySidesResult)
 		{
-		}
+			//Decleration
+			int side1 = 9999;
+			int side2 = 1;
+			int side3 = 9999;
+			char* result;
+
+			//Calculations and Comparison
+			result = analyzeTriangle(side1, side2, side3);
+			Assert::AreEqual("Isosceles triangle", result);
+
+		}//(6)
+
+		//Testing side lengths with values (-0, -0, -0)
+		TEST_METHOD(AnalyzeTriangleFunction_AnalyzeTriangleType_NotATriangleUndefinedSidesResult)
+		{
+			//Decleration
+			int side1 = -0;
+			int side2 = -0;
+			int side3 = -0;
+			char* result;
+
+			//Calculations and Comparison
+			result = analyzeTriangle(side1, side2, side3);
+			Assert::AreEqual("Not a Triangle", result);
+
+		}//(7)
 
 		//The following 6 test methods test the calculateTriangle() function=----------------------------=
-		TEST_METHOD(CalculateTriangleAnglesFunction_TriangleAnglesDetermination_606060AnglesEquilateralCase)
-		{
-		}
+		//TEST_METHOD(CalculateTriangleAnglesFunction_TriangleAnglesDetermination_606060AnglesEquilateralCase)
+		//{
+		//}//(8)
 
-		TEST_METHOD(CalculateTriangleAnglesFunction_TriangleAnglesDetermination_806060AnglesIsoscelesCase)
-		{
-		}
+		//TEST_METHOD(CalculateTriangleAnglesFunction_TriangleAnglesDetermination_806060AnglesIsoscelesCase)
+		//{
+		//}//(9)
 
-		TEST_METHOD(CalculateTriangleAnglesFunction_TriangleAnglesDetermination_1050120AnglesScaleneCase)
-		{
-		}
+		//TEST_METHOD(CalculateTriangleAnglesFunction_TriangleAnglesDetermination_1050120AnglesScaleneCase)
+		//{
+		//}//(10)
 
-		TEST_METHOD(CalculateTriangleAnglesFunction_TriangleAnglesDetermination_000AnglesCase)
-		{
-		}
+		//TEST_METHOD(CalculateTriangleAnglesFunction_TriangleAnglesDetermination_000AnglesCase)
+		//{
+		//}//(11)
 
-		TEST_METHOD(CalculateTriangleAnglesFunction_TriangleAnglesDetermination_NegtaiveAnglesCase)
-		{
-		}
+		//TEST_METHOD(CalculateTriangleAnglesFunction_TriangleAnglesDetermination_NegtaiveAnglesCase)
+		//{
+		//}//(12)
 
-		TEST_METHOD(CalculateTriangleAnglesFunction_TriangleAnglesDetermination_UndefinedAnglesCase)
-		{
-		}
+		//TEST_METHOD(CalculateTriangleAnglesFunction_TriangleAnglesDetermination_UndefinedAnglesCase)
+		//{
+		//}//(13)
 
 		//The following 6 test methods test the classifyTriangleByAngles() function=----------------------------=
-		TEST_METHOD(ClasifyTriangleByAnglesFunction_TriangleByAngles_Less90AcuteTriangle)
-		{
-		}
+		//TEST_METHOD(ClasifyTriangleByAnglesFunction_TriangleByAngles_Less90AcuteTriangle)
+		//{
+		//}//(14)
 
-		TEST_METHOD(CalculateTriangleAnglesFunction_TriangleAnglesDetermination_Greater90ObtuseTriangle)
-		{
-		}
+		///TEST_METHOD(CalculateTriangleAnglesFunction_TriangleAnglesDetermination_Greater90ObtuseTriangle)
+		//{
+		//}//(15)
 
-		TEST_METHOD(CalculateTriangleAnglesFunction_TriangleAnglesDetermination_Equal90RightTriangle)
-		{
-		}
+		//TEST_METHOD(CalculateTriangleAnglesFunction_TriangleAnglesDetermination_Equal90RightTriangle)
+		//{
+		//}//(16)
 
-		TEST_METHOD(CalculateTriangleAnglesFunction_TriangleAnglesDetermination_AllZeroAnglesNoTriangle)
-		{
-		}
+		//TEST_METHOD(CalculateTriangleAnglesFunction_TriangleAnglesDetermination_AllZeroAnglesNoTriangle)
+		//{
+		//}//(17)
 
-		TEST_METHOD(CalculateTriangleAnglesFunction_TriangleAnglesDetermination_UndefinedAnglesNoTriangle)
-		{
-		}
+		//TEST_METHOD(CalculateTriangleAnglesFunction_TriangleAnglesDetermination_UndefinedAnglesNoTriangle)
+		//{
+		//}//(18)
 
-		TEST_METHOD(CalculateTriangleAnglesFunction_TriangleAnglesDetermination_NegativeAnglesNoTriangle)
-		{
-		}
+		//TEST_METHOD(CalculateTriangleAnglesFunction_TriangleAnglesDetermination_NegativeAnglesNoTriangle)
+		//{
+		//}//(19)
 
-		TEST_METHOD(CalculateTriangleAnglesFunction_TriangleAnglesDetermination_NegativeZeroAnglesNoTriangle)
-		{
-		}
+		//TEST_METHOD(CalculateTriangleAnglesFunction_TriangleAnglesDetermination_NegativeZeroAnglesNoTriangle)
+		//{
+		//}//(20)
 
 	};
 
