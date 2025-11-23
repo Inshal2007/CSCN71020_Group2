@@ -60,14 +60,14 @@ namespace polygonCheckerOutcomes
 		TEST_METHOD(AnalyzeTriangleFunction_AnalyzeTriangleType_ScaleneTriangleResult)
 		{
 			//Decleration
-			int side1 = 10;
+			int side1 = 25;
 			int side2 = 10;
 			int side3 = 8;
 			char* result;
 
 			//Calculations and Comparison
 			result = analyzeTriangle(side1, side2, side3);
-			Assert::AreEqual("SCalene triangle", result);
+			Assert::AreEqual("Scalene triangle", result);
 		}//(4)
 
 		//TEST_METHOD(AnalyzeTriangleFunction_AnalyzeTriangleType_NotATriangleNegativeSidesResult)
