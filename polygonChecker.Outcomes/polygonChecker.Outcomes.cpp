@@ -90,6 +90,7 @@ namespace polygonCheckerOutcomes
 
 		}//(5)
 
+		//Testing side lengths with values (9999, 1, 9999)
 		TEST_METHOD(AnalyzeTriangleFunction_AnalyzeTriangleType_NotATriangleBoundarySidesResult)
 		{
 			//Decleration
