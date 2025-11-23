@@ -22,6 +22,7 @@ char* analyzeTriangle(int side1, int side2, int side3) {
 
 	return result;
 }
+
 void calculateTriangleAngles(int side1, int side2, int side3, double* angle1, double* angle2, double* angle3) {
 	// Calculate angles using Law of Cosines
 
@@ -34,6 +35,7 @@ void calculateTriangleAngles(int side1, int side2, int side3, double* angle1, do
 	// Angle C (opposite side c)
 	*angle3 = 180.0 - (*angle1 + *angle2);
 }
+
 char* classifyTriangleByAngles(double angle1, double angle2, double angle3) {
 	
 	// Check for right-angled triangle (one angle exactly 90 degrees)
