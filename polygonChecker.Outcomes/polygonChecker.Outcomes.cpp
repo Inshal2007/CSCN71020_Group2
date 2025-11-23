@@ -37,7 +37,7 @@ namespace polygonCheckerOutcomes
 
 			//Calculations and Comparison
 			result = analyzeTriangle(side1, side2, side3);
-			Assert::AreEqual("Equilteral", result);
+			Assert::AreEqual("Equilateral triangle", result);
 		}//(2)
 
 		//TEST_METHOD(AnalyzeTriangleFunction_AnalyzeTriangleType_IsoscelesTriangleResult)
