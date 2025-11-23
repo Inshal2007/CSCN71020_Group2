@@ -24,7 +24,7 @@ namespace polygonCheckerOutcomes
 
 			//Calculations and Comparison
 			result = analyzeTriangle(side1, side2, side3);
-			Assert::AreEqual("Not a triangle", result);
+			Assert::AreEqual("Not a Triangle", result);
 		}
 
 		//TEST_METHOD(AnalyzeTriangleFunction_AnalyzeTriangleType_EquilateralTriangleResult)
