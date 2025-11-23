@@ -94,13 +94,13 @@ namespace polygonCheckerOutcomes
 		{
 			//Decleration
 			int side1 = 9999;
-			int side2 = 0;
+			int side2 = 1;
 			int side3 = 9999;
 			char* result;
 
 			//Calculations and Comparison
 			result = analyzeTriangle(side1, side2, side3);
-			Assert::AreEqual("Equilateral triangle", result);
+			Assert::AreEqual("Isosceles triangle", result);
 
 		}//(6)
 
