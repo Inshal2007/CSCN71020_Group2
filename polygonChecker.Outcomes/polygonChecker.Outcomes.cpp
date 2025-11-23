@@ -43,6 +43,7 @@ namespace polygonCheckerOutcomes
 			Assert::AreEqual("Equilateral triangle", result);
 		}//(2)
 
+		//Testing side lengths with values (10, 10, 8)
 		TEST_METHOD(AnalyzeTriangleFunction_AnalyzeTriangleType_IsoscelesTriangleResult)
 		{
 			//Decleration
