@@ -14,7 +14,7 @@ namespace polygonCheckerOutcomes
 	public:
 		
 		//The following 6 test methods test the analyzeTriangle() function=----------------------------=
-		TEST_METHOD(AnalyzeTriangleFunction_AnalyzeTriangleType_NotATriangleResult)
+		TEST_METHOD(AnalyzeTriangleFunction_AnalyzeTriangleType_NotATriangleResult) 
 		{
 			//Decleration
 			int side1 = 0;
@@ -25,81 +25,81 @@ namespace polygonCheckerOutcomes
 			//Calculations and Comparison
 			result = analyzeTriangle(side1, side2, side3);
 			Assert::AreEqual("Not a Triangle", result);
-		}
+		}//(1)
 
 		//TEST_METHOD(AnalyzeTriangleFunction_AnalyzeTriangleType_EquilateralTriangleResult)
 		//{
-		//}
+		//}//(2)
 
 		//TEST_METHOD(AnalyzeTriangleFunction_AnalyzeTriangleType_IsoscelesTriangleResult)
 		//{
-		//}
+		//}//(3)
 
 		//TEST_METHOD(AnalyzeTriangleFunction_AnalyzeTriangleType_ScaleneTriangleResult)
 		//{
-		//}
+		//}//(4)
 
 		//TEST_METHOD(AnalyzeTriangleFunction_AnalyzeTriangleType_NotATriangleNegativeSidesResult)
 		//{
-		//}
+		//}//(5)
 
 		//TEST_METHOD(AnalyzeTriangleFunction_AnalyzeTriangleType_NotATriangleBoundarySidesResult)
 		//{
-		//}
+		//}//(6)
 
 		//The following 6 test methods test the calculateTriangle() function=----------------------------=
 		//TEST_METHOD(CalculateTriangleAnglesFunction_TriangleAnglesDetermination_606060AnglesEquilateralCase)
 		//{
-		//}
+		//}//(7)
 
 		//TEST_METHOD(CalculateTriangleAnglesFunction_TriangleAnglesDetermination_806060AnglesIsoscelesCase)
 		//{
-		//}
+		//}//(8)
 
 		//TEST_METHOD(CalculateTriangleAnglesFunction_TriangleAnglesDetermination_1050120AnglesScaleneCase)
 		//{
-		//}
+		//}//(9)
 
 		//TEST_METHOD(CalculateTriangleAnglesFunction_TriangleAnglesDetermination_000AnglesCase)
 		//{
-		//}
+		//}//(10)
 
 		//TEST_METHOD(CalculateTriangleAnglesFunction_TriangleAnglesDetermination_NegtaiveAnglesCase)
 		//{
-		//}
+		//}//(11)
 
 		//TEST_METHOD(CalculateTriangleAnglesFunction_TriangleAnglesDetermination_UndefinedAnglesCase)
 		//{
-		//}
+		//}//(12)
 
 		//The following 6 test methods test the classifyTriangleByAngles() function=----------------------------=
 		//TEST_METHOD(ClasifyTriangleByAnglesFunction_TriangleByAngles_Less90AcuteTriangle)
 		//{
-		//}
+		//}//(13)
 
 		///TEST_METHOD(CalculateTriangleAnglesFunction_TriangleAnglesDetermination_Greater90ObtuseTriangle)
 		//{
-		//}
+		//}//(14)
 
 		//TEST_METHOD(CalculateTriangleAnglesFunction_TriangleAnglesDetermination_Equal90RightTriangle)
 		//{
-		//}
+		//}//(15)
 
 		//TEST_METHOD(CalculateTriangleAnglesFunction_TriangleAnglesDetermination_AllZeroAnglesNoTriangle)
 		//{
-		//}
+		//}//(16)
 
 		//TEST_METHOD(CalculateTriangleAnglesFunction_TriangleAnglesDetermination_UndefinedAnglesNoTriangle)
 		//{
-		//}
+		//}//(17)
 
 		//TEST_METHOD(CalculateTriangleAnglesFunction_TriangleAnglesDetermination_NegativeAnglesNoTriangle)
 		//{
-		//}
+		//}//(18)
 
 		//TEST_METHOD(CalculateTriangleAnglesFunction_TriangleAnglesDetermination_NegativeZeroAnglesNoTriangle)
 		//{
-		//}
+		//}//(19)
 
 	};
 
