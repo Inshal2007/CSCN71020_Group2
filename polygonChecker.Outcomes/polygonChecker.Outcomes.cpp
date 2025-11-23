@@ -115,7 +115,7 @@ namespace polygonCheckerOutcomes
 
 			//Calculations and Comparison
 			result = analyzeTriangle(side1, side2, side3);
-			Assert::AreEqual("No triangle", result);
+			Assert::AreEqual("Not a Triangle", result);
 
 		}//(7)
 
