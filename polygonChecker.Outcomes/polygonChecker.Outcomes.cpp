@@ -27,6 +27,7 @@ namespace polygonCheckerOutcomes
 			//Calculations and Comparison
 			result = analyzeTriangle(side1, side2, side3);
 			Assert::AreEqual("Not a Triangle", result);
+
 		}//(1)
 
 		//Testing side lengths with values (10, 10, 10)
@@ -41,6 +42,7 @@ namespace polygonCheckerOutcomes
 			//Calculations and Comparison
 			result = analyzeTriangle(side1, side2, side3);
 			Assert::AreEqual("Equilateral triangle", result);
+
 		}//(2)
 
 		//Testing side lengths with values (10, 10, 8)
@@ -55,6 +57,7 @@ namespace polygonCheckerOutcomes
 			//Calculations and Comparison
 			result = analyzeTriangle(side1, side2, side3);
 			Assert::AreEqual("Isosceles triangle", result);	 
+
 		}//(3)
 
 		//Testing side lengths with values (24, 10, 8)
@@ -69,8 +72,10 @@ namespace polygonCheckerOutcomes
 			//Calculations and Comparison
 			result = analyzeTriangle(side1, side2, side3);
 			Assert::AreEqual("Scalene triangle", result);
+
 		}//(4)
 
+		//Testing side lengths with values (24, 10, 8)
 		TEST_METHOD(AnalyzeTriangleFunction_AnalyzeTriangleType_NotATriangleNegativeSidesResult)
 		{
 			//Decleration
@@ -82,6 +87,7 @@ namespace polygonCheckerOutcomes
 			//Calculations and Comparison
 			result = analyzeTriangle(side1, side2, side3);
 			Assert::AreEqual("Not a Triangle", result);
+
 		}//(5)
 
 		//TEST_METHOD(AnalyzeTriangleFunction_AnalyzeTriangleType_NotATriangleBoundarySidesResult)
