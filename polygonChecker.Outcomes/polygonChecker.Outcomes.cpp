@@ -90,9 +90,19 @@ namespace polygonCheckerOutcomes
 
 		}//(5)
 
-		//TEST_METHOD(AnalyzeTriangleFunction_AnalyzeTriangleType_NotATriangleBoundarySidesResult)
-		//{
-		//}//(6)
+		TEST_METHOD(AnalyzeTriangleFunction_AnalyzeTriangleType_NotATriangleBoundarySidesResult)
+		{
+			//Decleration
+			int side1 = 9999;
+			int side2 = 0;
+			int side3 = 9999;
+			char* result;
+
+			//Calculations and Comparison
+			result = analyzeTriangle(side1, side2, side3);
+			Assert::AreEqual("Equilateral triangle", result);
+
+		}//(6)
 
 		//The following 6 test methods test the calculateTriangle() function=----------------------------=
 		//TEST_METHOD(CalculateTriangleAnglesFunction_TriangleAnglesDetermination_606060AnglesEquilateralCase)
