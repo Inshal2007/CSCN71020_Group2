@@ -57,6 +57,7 @@ namespace polygonCheckerOutcomes
 			Assert::AreEqual("Isosceles triangle", result);	 
 		}//(3)
 
+		//Testing side lengths with values (24, 10, 8)
 		TEST_METHOD(AnalyzeTriangleFunction_AnalyzeTriangleType_ScaleneTriangleResult)
 		{
 			//Decleration
