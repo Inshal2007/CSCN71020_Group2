@@ -57,9 +57,18 @@ namespace polygonCheckerOutcomes
 			Assert::AreEqual("Isosceles triangle", result);	 
 		}//(3)
 
-		//TEST_METHOD(AnalyzeTriangleFunction_AnalyzeTriangleType_ScaleneTriangleResult)
-		//{
-		//}//(4)
+		TEST_METHOD(AnalyzeTriangleFunction_AnalyzeTriangleType_ScaleneTriangleResult)
+		{
+			//Decleration
+			int side1 = 10;
+			int side2 = 10;
+			int side3 = 8;
+			char* result;
+
+			//Calculations and Comparison
+			result = analyzeTriangle(side1, side2, side3);
+			Assert::AreEqual("SCalene triangle", result);
+		}//(4)
 
 		//TEST_METHOD(AnalyzeTriangleFunction_AnalyzeTriangleType_NotATriangleNegativeSidesResult)
 		//{
