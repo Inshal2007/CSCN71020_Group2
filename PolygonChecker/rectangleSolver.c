@@ -2,46 +2,24 @@
 #include <stdbool.h>
 #include <string.h>
 #include <ctype.h>
+#include <stdlib.h>
 #include "rectangleSolver.h"
 
-// Function to clear any leftover input from the buffer
-void clearInputBuffer() {
-    int c;
-    while ((c = getchar()) != '\n' && c != EOF) {}
-}
-
-// Function to check if a string represents a valid integer
-bool isValidInteger(const char* input) {
-    // Handle empty input
-    if (input == NULL || strlen(input) == 0) {
-        return false;
-    }
-
-    // Check each character - allow negative numbers
-    int startIndex = 0;
-    if (input[0] == '-') {
-        startIndex = 1;
-        // If it's just a minus sign, it's invalid
-        if (strlen(input) == 1) {
-            return false;
-        }
-    }
-
-    for (int i = startIndex; i < strlen(input); i++) {
-        if (!isdigit(input[i])) {
-            return false;
-        }
-    }
-
-    return true;
-}
-
-// Function to get four coordinate points from user (basic structure)
+// Gets four coordinate points from user input
 void getRectanglePoints(int* xCoords, int* yCoords) {
-    printf_s("Rectangle point input system - to be implemented in next commit\n");
+    printf_s("Rectangle coordinate input system - Feature under development\n");
+    printf_s("This feature will allow entering four points to analyze rectangle properties\n");
+
+    // Initialize points with default values for now
+    for (int i = 0; i < 4; i++) {
+        xCoords[i] = i + 1;  // Temporary x coordinates
+        yCoords[i] = i + 1;  // Temporary y coordinates
+    }
+
+    printf_s("Sample points set for testing: (1,1), (2,2), (3,3), (4,4)\n");
 }
 
-// Function to analyze rectangle (basic structure)
+// Analyzes if four points form a rectangle and calculates properties
 char* analyzeRectangle(int x1, int y1, int x2, int y2, int x3, int y3, int x4, int y4) {
-    return "Rectangle analysis to be implemented";
+    return "Rectangle analysis feature - Implementation in progress for upcoming sprint";
 }
