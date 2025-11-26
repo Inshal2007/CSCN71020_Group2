@@ -1,4 +1,5 @@
 #pragma once
 
+// Rectangle analysis function declarations
 char* analyzeRectangle(int x1, int y1, int x2, int y2, int x3, int y3, int x4, int y4);
 void getRectanglePoints(int* xCoords, int* yCoords);
