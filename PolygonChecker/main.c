@@ -31,8 +31,10 @@ int main() {
                 calculateTriangleAngles(triangleSidesPtr[0], triangleSidesPtr[1], triangleSidesPtr[2], &angle1, &angle2, &angle3);
 
                 printf_s("\n+==============================+\n");
+                printf_s("\n+==============================+\n");
                 printf_s("|       TRIANGLE ANALYSIS      |\n");
-                printf_s("+==============================+\n");
+                printf_s("\n+==============================+\n");
+                printf_s("\n+==============================+\n");
                 printf_s("| Type: %-21s |\n", result);
                 printf_s("| Angles: %-3.0f, %-3.0f, %-3.0f         |\n", angle1, angle2, angle3);
 
