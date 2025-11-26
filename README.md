@@ -23,13 +23,13 @@ We are currently starting rectangle feature development after completing all tri
 - Comprehensive unit test suite for all functionality
 - Code documentation and final project polish
 
-## Team Workflow
-Each team member works on their own feature branches. We follow a systematic approach:
-1. Select an issue from GitHub Issues
-2. Create a feature branch for the task
-3. Implement changes with regular commits
-4. Create pull requests for code review
-5. Merge approved changes to main branch
+Team Workflow
+Each team member works on their own feature branch to keep development organized and isolated. Our workflow includes the following steps:
+1.Select a task or bug from GitHub Issues based on priority.
+2.Create a dedicated feature branch following our branch-naming conventions.
+3.Implement the required changes with clear, frequent commits that document progress.
+4.Open a pull request for peer review, ensuring the code meets project standards.
+5.After approval and successful checks, merge the feature branch into the main branch.
 
 ## Testing Strategy
 We are using Microsoft C++ Native Unit Test Framework with Test-Driven Development approach. Comprehensive test coverage will be implemented for all features.
