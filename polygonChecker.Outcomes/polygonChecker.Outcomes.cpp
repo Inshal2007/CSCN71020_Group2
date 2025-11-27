@@ -141,9 +141,23 @@ namespace polygonCheckerOutcomes
 
 		}//(8)
 
-		//TEST_METHOD(CalculateTriangleAnglesFunction_TriangleAnglesDetermination_806060AnglesIsoscelesCase)
-		//{
-		//}//(9)
+		TEST_METHOD(CalculateTriangleAnglesFunction_TriangleAnglesDetermination_IsoscelesCase)
+		{
+			//Decleration
+			double side1 = 10.0;
+			double side2 = 15.0;
+			double side3 = 10.0;
+			double angle1 = 0.0;
+			double angle2 = 0.0;
+			double angle3 = 0.0;
+
+			//Calculations and Comparison
+			calculateTriangleAngles(side1, side2, side3, &angle1, &angle2, &angle3);
+			Assert::AreEqual(120.0, angle1, 0.01);
+			Assert::AreEqual(80.0, angle2, 0.01);
+			Assert::AreEqual(80.0, angle1, 0.01);
+
+		}//(9)
 
 		//TEST_METHOD(CalculateTriangleAnglesFunction_TriangleAnglesDetermination_1050120AnglesScaleneCase)
 		//{
