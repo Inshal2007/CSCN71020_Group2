@@ -198,6 +198,7 @@ namespace polygonCheckerOutcomes
 		
 		}//(11)
 
+		//Testing side lengths with values (9.4732, 12.43, 4.2) for an Isosceles triangle
 		TEST_METHOD(CalculateTriangleAnglesFunction_TriangleAnglesDetermination_AnglesFromFractionalSides)
 		{
 			//Decleration
@@ -215,10 +216,6 @@ namespace polygonCheckerOutcomes
 			Assert::AreEqual(14.6265, angle3, 0.01);
 
 		}//(12)
-
-		//TEST_METHOD(CalculateTriangleAnglesFunction_TriangleAnglesDetermination_UndefinedAnglesCase)
-		//{
-		//}//(13)
 
 		//The following 6 test methods test the classifyTriangleByAngles() function=----------------------------=
 		//TEST_METHOD(ClasifyTriangleByAnglesFunction_TriangleByAngles_Less90AcuteTriangle)
