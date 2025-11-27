@@ -3,4 +3,4 @@
 // Function declarations for main program operations
 void printWelcome();
 int printShapeMenu();
-int* getTriangleSides(int* triangleSides);
+double* getTriangleSides(double* triangleSides);

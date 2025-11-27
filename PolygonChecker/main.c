@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdbool.h>
 #include "main.h"
+#include <string.h>
 #include "triangleSolver.h"
 #include "rectangleSolver.h"
 
@@ -20,13 +21,12 @@ int main() {
             // Triangle analysis selected by user
             printf_s("Triangle selected.\n");
 
-            int triangleSides[3] = { 0, 0, 0 };
-            int* triangleSidesPtr = getTriangleSides(triangleSides);
-
+            double triangleSides[3] = { 0, 0, 0 };
+            double* triangleSidesPtr = getTriangleSides(triangleSides);
             char* result = analyzeTriangle(triangleSidesPtr[0], triangleSidesPtr[1], triangleSidesPtr[2]);
 
-            // Only calculate angles if triangle is valid (all sides positive)
-            if (triangleSidesPtr[0] > 0 && triangleSidesPtr[1] > 0 && triangleSidesPtr[2] > 0) {
+            // Only calculate angles if it's a valid triangle (not "Not a Triangle")
+            if (strcmp(result, "Not a Triangle") != 0) {
                 double angle1, angle2, angle3;
                 calculateTriangleAngles(triangleSidesPtr[0], triangleSidesPtr[1], triangleSidesPtr[2], &angle1, &angle2, &angle3);
 
@@ -34,7 +34,7 @@ int main() {
                 printf_s("|       TRIANGLE ANALYSIS      |\n");
                 printf_s("+==============================+\n");
                 printf_s("| Type: %-21s |\n", result);
-                printf_s("| Angles: %-3.0f, %-3.0f, %-3.0f         |\n", angle1, angle2, angle3);
+                printf_s("| Angles: %-6.2f, %-6.2f, %-6.2f   |\n", angle1, angle2, angle3);
 
                 char* angleType = classifyTriangleByAngles(angle1, angle2, angle3);
                 printf_s("| Classification: %-12s |\n", angleType);
@@ -129,36 +129,31 @@ int printShapeMenu() {
 }
 
 // Gets three triangle side lengths from user with validation
-int* getTriangleSides(int* triangleSides) {
-  
+double* getTriangleSides(double* triangleSides) {
     printf_s("Enter the three sides of the triangle: \n");
 
-    const int MIN_SIDE = 0;
-    const int MAX_SIDE = 10000;
-    
     for (int i = 0; i < 3; i++) {
         printf_s("Enter side %d: ", i + 1);
 
-        int inputResult;
-        char buffer[100];
+        int validInput = 0;
+        char inputLine[100];
 
-        do {
-            inputResult = scanf_s("%d", &triangleSides[i]);
-
-            if (inputResult != 1) {
-                printf_s("Invalid input. Please enter a number between %d and %d: ", MIN_SIDE, MAX_SIDE);
-                scanf_s("%99s", buffer, (unsigned)sizeof(buffer));
-                inputResult = 0;
+        while (!validInput) {
+            if (fgets(inputLine, sizeof(inputLine), stdin)) {
+                // Try to parse as double
+                if (sscanf_s(inputLine, "%lf", &triangleSides[i]) == 1) {
+                    if (triangleSides[i] > 0 && triangleSides[i] <= 10000) {
+                        validInput = 1;
+                    }
+                    else {
+                        printf_s("Please enter a positive number between 0.1 and 10000: ");
+                    }
+                }
+                else {
+                    printf_s("Invalid input. Please enter a number: ");
+                }
             }
-            else if (triangleSides[i] < 0) {
-                printf_s("Number too small. Please enter a number between %d and %d: ", MIN_SIDE, MAX_SIDE);
-                inputResult = 0;
-            }
-            else if (triangleSides[i] > MAX_SIDE) {
-                printf_s("Number too large. Please enter a number between %d and %d: ", MIN_SIDE, MAX_SIDE);
-                inputResult = 0;
-            }
-        } while (inputResult != 1);
+        }
     }
 
     return triangleSides;
