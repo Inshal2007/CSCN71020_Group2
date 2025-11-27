@@ -46,10 +46,10 @@ void calculateTriangleAngles(double side1, double side2, double side3, double* a
 	// Calculate angles using Law of Cosines
 
 	// Angle A (opposite side a)
-	*angle1 = acos((side2 * side2 + side3 * side3 - side1 * side1) / (2.0 * side2 * side3)) * (180.0 / 3.14159265358979323846);
+	*angle1 = acos(cosA) * (180.0 / 3.14159265358979323846);
 
 	// Angle B (opposite side b)  
-	*angle2 = acos((side1 * side1 + side3 * side3 - side2 * side2) / (2.0 * side1 * side3)) * (180.0 / 3.14159265358979323846);
+	*angle2 = acos(cosB) * (180.0 / 3.14159265358979323846);
 
 	// Angle C (opposite side c)
 	*angle3 = 180.0 - (*angle1 + *angle2);
