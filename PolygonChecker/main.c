@@ -31,10 +31,8 @@ int main() {
                 calculateTriangleAngles(triangleSidesPtr[0], triangleSidesPtr[1], triangleSidesPtr[2], &angle1, &angle2, &angle3);
 
                 printf_s("\n+==============================+\n");
-                printf_s("\n+==============================+\n");
                 printf_s("|       TRIANGLE ANALYSIS      |\n");
-                printf_s("\n+==============================+\n");
-                printf_s("\n+==============================+\n");
+                printf_s("+==============================+\n");
                 printf_s("| Type: %-21s |\n", result);
                 printf_s("| Angles: %-3.0f, %-3.0f, %-3.0f         |\n", angle1, angle2, angle3);
 
@@ -106,36 +104,38 @@ int printShapeMenu() {
     printf_s("0. Exit\n");
 
     int shapeChoice;
-    int inputResult;
-    char buffer[100]; // Buffer for handling invalid input
+    char inputBuffer[100]; // Buffer to read entire input line
 
     printf_s("Enter number: ");
 
     // Input validation loop - ensures valid menu selection
-    do {
-        inputResult = scanf_s("%d", &shapeChoice);
-
-        if (inputResult != 1) {
-            printf_s("Invalid input. Please enter 0, 1, or 2: ");
-            scanf_s("%99s", buffer, (unsigned)sizeof(buffer));
-            inputResult = 0;
+    while (1) {
+        // Read entire line as string to capture all user input
+        if (fgets(inputBuffer, sizeof(inputBuffer), stdin) != NULL) {
+            
+            // Try to convert to integer and check for extra content after the number
+            char extraContent[100];
+            int conversionResult = sscanf_s(inputBuffer, "%d %s", &shapeChoice, extraContent, (unsigned)sizeof(extraContent));
+            
+            // Valid input: conversion successful, no extra content, and within valid range
+            if (conversionResult == 1 && shapeChoice >= 0 && shapeChoice <= 2) {
+           
+                return shapeChoice; // Valid input - return the choice
+            }
         }
-        else if (shapeChoice < 0 || shapeChoice > 2) {
-            printf_s("Please enter 0, 1, or 2 only: ");
-            inputResult = 0;
-        }
-    } while (inputResult != 1);
-
-    return shapeChoice;
+        // Invalid input - prompt user again
+        printf_s("Invalid input. Please enter 0, 1, or 2 only: ");
+    }
 }
 
 // Gets three triangle side lengths from user with validation
 int* getTriangleSides(int* triangleSides) {
+  
     printf_s("Enter the three sides of the triangle: \n");
 
     const int MIN_SIDE = 0;
     const int MAX_SIDE = 10000;
-
+    
     for (int i = 0; i < 3; i++) {
         printf_s("Enter side %d: ", i + 1);
 
