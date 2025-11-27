@@ -141,6 +141,7 @@ namespace polygonCheckerOutcomes
 
 		}//(8)
 
+		//Testing side lengths with values (10, 15, 10) for an Isosceles triangle
 		TEST_METHOD(CalculateTriangleAnglesFunction_TriangleAnglesDetermination_IsoscelesCase)
 		{
 			//Decleration
