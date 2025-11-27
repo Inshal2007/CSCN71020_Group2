@@ -31,6 +31,13 @@ void calculateTriangleAngles(double side1, double side2, double side3, double* a
 	
 	// Calculate angles using Law of Cosines with safety checks
 
+	//9.4732;
+	//12.43;
+	//4.2;
+
+	//0.7892137088
+	//-0.5921891652
+
 	double a = side1, b = side2, c = side3;
 
 	// Ensure values are within valid range for acos() function
