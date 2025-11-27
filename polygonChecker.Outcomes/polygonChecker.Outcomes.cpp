@@ -156,10 +156,11 @@ namespace polygonCheckerOutcomes
 			calculateTriangleAngles(side1, side2, side3, &angle1, &angle2, &angle3);
 			Assert::AreEqual(41.4096, angle1, 0.01);
 			Assert::AreEqual(97.1808, angle2, 0.01);
-			Assert::AreEqual(41.4096, angle1, 0.01);
+			Assert::AreEqual(41.4096, angle3, 0.01);
 
 		}//(9)
 
+		//Testing side lengths with values (10, 15, 8) for an Isosceles triangle
 		TEST_METHOD(CalculateTriangleAnglesFunction_TriangleAnglesDetermination_1050120AnglesScaleneCase)
 		{
 			//Decleration
