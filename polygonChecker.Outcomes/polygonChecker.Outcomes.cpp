@@ -172,9 +172,9 @@ namespace polygonCheckerOutcomes
 
 			//Calculations and Comparison
 			calculateTriangleAngles(side1, side2, side3, &angle1, &angle2, &angle3);
-			Assert::AreEqual(130.0, angle1, 0.01);
-			Assert::AreEqual(20, angle2, 0.01);
-			Assert::AreEqual(30, angle1, 0.01);
+			Assert::AreEqual(30.7535, angle1, 0.01);
+			Assert::AreEqual(125.1, angle2, 0.01);
+			Assert::AreEqual(24.1468, angle3, 0.01);
 
 		}//(10)
 
