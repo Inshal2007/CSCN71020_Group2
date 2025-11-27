@@ -161,7 +161,7 @@ namespace polygonCheckerOutcomes
 		}//(9)
 
 		//Testing side lengths with values (10, 15, 8) for an Isosceles triangle
-		TEST_METHOD(CalculateTriangleAnglesFunction_TriangleAnglesDetermination_1050120AnglesScaleneCase)
+		TEST_METHOD(CalculateTriangleAnglesFunction_TriangleAnglesDetermination_AnglesScaleneCase)
 		{
 			//Decleration
 			double side1 = 10.0;
@@ -179,6 +179,7 @@ namespace polygonCheckerOutcomes
 
 		}//(10)
 
+		//Testing side lengths with values (1, 9999, 9999) for an Isosceles triangle
 		TEST_METHOD(CalculateTriangleAnglesFunction_TriangleAnglesDetermination_BoundaryCase)
 		{
 			//Decleration
@@ -191,19 +192,30 @@ namespace polygonCheckerOutcomes
 
 			//Calculations and Comparison
 			calculateTriangleAngles(side1, side2, side3, &angle1, &angle2, &angle3);
-			Assert::AreEqual(0, angle1, 0.01);
-			Assert::AreEqual(0, angle2, 0.01);
-			Assert::AreEqual(0, angle3, 0.01);
+			Assert::AreEqual(0.0057301, angle1, 0.01);
+			Assert::AreEqual(89.9971, angle2, 0.01);
+			Assert::AreEqual(89.9971, angle3, 0.01);
 		
 		}//(11)
 
-		//TEST_METHOD(CalculateTriangleAnglesFunction_TriangleAnglesDetermination_NegtaiveAnglesCase)
-		//{
-		//}//(12)
+		//Testing side lengths with values (9.4732, 12.43, 4.2) for an Isosceles triangle
+		TEST_METHOD(CalculateTriangleAnglesFunction_TriangleAnglesDetermination_AnglesFromFractionalSides)
+		{
+			//Decleration
+			double side1 = 9.4732;
+			double side2 = 12.43;
+			double side3 = 4.2;
+			double angle1 = 0.0;
+			double angle2 = 0.0;
+			double angle3 = 0.0;
 
-		//TEST_METHOD(CalculateTriangleAnglesFunction_TriangleAnglesDetermination_UndefinedAnglesCase)
-		//{
-		//}//(13)
+			//Calculations and Comparison
+			calculateTriangleAngles(side1, side2, side3, &angle1, &angle2, &angle3);
+			Assert::AreEqual(34.6222, angle1, 0.01);
+			Assert::AreEqual(130.751, angle2, 0.01);
+			Assert::AreEqual(14.6265, angle3, 0.01);
+
+		}//(12)
 
 		//The following 6 test methods test the classifyTriangleByAngles() function=----------------------------=
 		//TEST_METHOD(ClasifyTriangleByAnglesFunction_TriangleByAngles_Less90AcuteTriangle)
