@@ -121,9 +121,21 @@ namespace polygonCheckerOutcomes
 		}//(7)
 
 		//The following 6 test methods test the calculateTriangle() function=----------------------------=
-		//TEST_METHOD(CalculateTriangleAnglesFunction_TriangleAnglesDetermination_606060AnglesEquilateralCase)
-		//{
-		//}//(8)
+		TEST_METHOD(CalculateTriangleAnglesFunction_TriangleAnglesDetermination_606060AnglesEquilateralCase)
+		{
+			//Decleration
+			int side1 = 10;
+			int side2 = 10;
+			int side3 = 10;
+			double angle1 = 0.0;
+			double angle2 = 0.0;
+			double angle3 = 0.0;
+
+			//Calculations and Comparison
+			calculateTriangleAngles(side1, side2, side3, &angle1, &angle2, &angle3);
+			Assert::AreEqual(60.7, angle1);
+
+		}//(8)
 
 		//TEST_METHOD(CalculateTriangleAnglesFunction_TriangleAnglesDetermination_806060AnglesIsoscelesCase)
 		//{
