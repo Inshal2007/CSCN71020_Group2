@@ -110,6 +110,7 @@ int printShapeMenu() {
 
     // Input validation loop - ensures valid menu selection
     while (1) {
+       
         // Read entire line as string to capture all user input
         if (fgets(inputBuffer, sizeof(inputBuffer), stdin) != NULL) {
             
@@ -130,7 +131,11 @@ int printShapeMenu() {
 
 // Gets three triangle side lengths from user with validation
 double* getTriangleSides(double* triangleSides) {
+
     printf_s("Enter the three sides of the triangle: \n");
+
+    const double MIN_SIDE = 0.1;
+    const double MAX_SIDE = 10000.0;
 
     for (int i = 0; i < 3; i++) {
         printf_s("Enter side %d: ", i + 1);
@@ -140,21 +145,29 @@ double* getTriangleSides(double* triangleSides) {
 
         while (!validInput) {
             if (fgets(inputLine, sizeof(inputLine), stdin)) {
-                // Try to parse as double
-                if (sscanf_s(inputLine, "%lf", &triangleSides[i]) == 1) {
-                    if (triangleSides[i] > 0 && triangleSides[i] <= 10000) {
+
+                double tempValue;
+                char extraContent[100];
+
+                // Try to parse as double and check for extra characters
+                int parseResult = sscanf_s(inputLine, "%lf %s", &tempValue, extraContent, (unsigned)sizeof(extraContent));
+
+                if (parseResult == 1) {
+                    // Valid number with no extra characters
+                    if (tempValue >= MIN_SIDE && tempValue <= MAX_SIDE) {
+                        triangleSides[i] = tempValue;
                         validInput = 1;
                     }
                     else {
-                        printf_s("Please enter a positive number between 0.1 and 10000: ");
+                        printf_s("Please enter a number between %.1f and %.1f: ", MIN_SIDE, MAX_SIDE);
                     }
                 }
                 else {
-                    printf_s("Invalid input. Please enter a number: ");
+                    // Either no number found or mixed characters
+                    printf_s("Invalid input. Numbers only, no characters: ");
                 }
             }
         }
     }
-
     return triangleSides;
 }
