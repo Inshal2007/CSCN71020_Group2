@@ -3,9 +3,13 @@
 #include <math.h>
 #include "triangleSolver.h"
 
-char* analyzeTriangle(int side1, int side2, int side3) {
+char* analyzeTriangle(double side1, double side2, double side3) {
 	char* result = "";
 	if (side1 <= 0 || side2 <= 0 || side3 <= 0) {
+		result = "Not a Triangle";
+	}
+	// Check triangle inequality theorem
+	else if (side1 + side2 <= side3 || side1 + side3 <= side2 || side2 + side3 <= side1) {
 		result = "Not a Triangle";
 	}
 	else if (side1 == side2 && side1 == side3) {
@@ -23,7 +27,22 @@ char* analyzeTriangle(int side1, int side2, int side3) {
 	return result;
 }
 
-void calculateTriangleAngles(int side1, int side2, int side3, double* angle1, double* angle2, double* angle3) {
+void calculateTriangleAngles(double side1, double side2, double side3, double* angle1, double* angle2, double* angle3) {
+	
+	// Calculate angles using Law of Cosines with safety checks
+
+	double a = side1, b = side2, c = side3;
+
+	// Ensure values are within valid range for acos() function
+	double cosA = (b * b + c * c - a * a) / (2.0 * b * c);
+	double cosB = (a * a + c * c - b * b) / (2.0 * a * c);
+
+	// Clamp values to avoid floating point errors
+	if (cosA > 1.0) cosA = 1.0;
+	if (cosA < -1.0) cosA = -1.0;
+	if (cosB > 1.0) cosB = 1.0;
+	if (cosB < -1.0) cosB = -1.0;
+	
 	// Calculate angles using Law of Cosines
 
 	// Angle A (opposite side a)
