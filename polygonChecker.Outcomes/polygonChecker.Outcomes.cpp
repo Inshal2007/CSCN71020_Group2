@@ -121,33 +121,81 @@ namespace polygonCheckerOutcomes
 		}//(7)
 
 		//The following 6 test methods test the calculateTriangle() function=----------------------------=
-		TEST_METHOD(CalculateTriangleAnglesFunction_TriangleAnglesDetermination_606060AnglesEquilateralCase)
+		
+		//Testing side lengths with values (10, 10, 10) for an equilateral triangle
+		TEST_METHOD(CalculateTriangleAnglesFunction_TriangleAnglesDetermination_EquilateralCase)
 		{
 			//Decleration
-			int side1 = 10;
-			int side2 = 10;
-			int side3 = 10;
+			double side1 = 10.0;
+			double side2 = 10.0;
+			double side3 = 10.0;
 			double angle1 = 0.0;
 			double angle2 = 0.0;
 			double angle3 = 0.0;
 
 			//Calculations and Comparison
 			calculateTriangleAngles(side1, side2, side3, &angle1, &angle2, &angle3);
-			Assert::AreEqual(60.0, angle1);
+			Assert::AreEqual(60.0, angle1, 0.01);
+			Assert::AreEqual(60.0, angle2, 0.01);
+			Assert::AreEqual(60.0, angle1, 0.01);
 
 		}//(8)
 
-		//TEST_METHOD(CalculateTriangleAnglesFunction_TriangleAnglesDetermination_806060AnglesIsoscelesCase)
-		//{
-		//}//(9)
+		//Testing side lengths with values (10, 15, 10) for an Isosceles triangle
+		TEST_METHOD(CalculateTriangleAnglesFunction_TriangleAnglesDetermination_IsoscelesCase)
+		{
+			//Decleration
+			double side1 = 10.0;
+			double side2 = 15.0;
+			double side3 = 10.0;
+			double angle1 = 0.0;
+			double angle2 = 0.0;
+			double angle3 = 0.0;
 
-		//TEST_METHOD(CalculateTriangleAnglesFunction_TriangleAnglesDetermination_1050120AnglesScaleneCase)
-		//{
-		//}//(10)
+			//Calculations and Comparison
+			calculateTriangleAngles(side1, side2, side3, &angle1, &angle2, &angle3);
+			Assert::AreEqual(41.4096, angle1, 0.01);
+			Assert::AreEqual(97.1808, angle2, 0.01);
+			Assert::AreEqual(41.4096, angle3, 0.01);
 
-		//TEST_METHOD(CalculateTriangleAnglesFunction_TriangleAnglesDetermination_000AnglesCase)
-		//{
-		//}//(11)
+		}//(9)
+
+		//Testing side lengths with values (10, 15, 8) for an Isosceles triangle
+		TEST_METHOD(CalculateTriangleAnglesFunction_TriangleAnglesDetermination_1050120AnglesScaleneCase)
+		{
+			//Decleration
+			double side1 = 10.0;
+			double side2 = 16.0;
+			double side3 = 8.0;
+			double angle1 = 0.0;
+			double angle2 = 0.0;
+			double angle3 = 0.0;
+
+			//Calculations and Comparison
+			calculateTriangleAngles(side1, side2, side3, &angle1, &angle2, &angle3);
+			Assert::AreEqual(30.7535, angle1, 0.01);
+			Assert::AreEqual(125.1, angle2, 0.01);
+			Assert::AreEqual(24.1468, angle3, 0.01);
+
+		}//(10)
+
+		TEST_METHOD(CalculateTriangleAnglesFunction_TriangleAnglesDetermination_BoundaryCase)
+		{
+			//Decleration
+			double side1 = 1.0;
+			double side2 = 9999.0;
+			double side3 = 9999.0;
+			double angle1 = 0.0;
+			double angle2 = 0.0;
+			double angle3 = 0.0;
+
+			//Calculations and Comparison
+			calculateTriangleAngles(side1, side2, side3, &angle1, &angle2, &angle3);
+			Assert::AreEqual(0, angle1, 0.01);
+			Assert::AreEqual(0, angle2, 0.01);
+			Assert::AreEqual(0, angle3, 0.01);
+		
+		}//(11)
 
 		//TEST_METHOD(CalculateTriangleAnglesFunction_TriangleAnglesDetermination_NegtaiveAnglesCase)
 		//{
