@@ -121,6 +121,8 @@ namespace polygonCheckerOutcomes
 		}//(7)
 
 		//The following 6 test methods test the calculateTriangle() function=----------------------------=
+		
+		//Testing side lengths with values (10, 10, 10) for an equilateral triangle
 		TEST_METHOD(CalculateTriangleAnglesFunction_TriangleAnglesDetermination_EquilateralCase)
 		{
 			//Decleration
