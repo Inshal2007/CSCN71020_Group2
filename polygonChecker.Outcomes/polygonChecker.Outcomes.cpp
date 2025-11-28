@@ -253,14 +253,14 @@ namespace polygonCheckerOutcomes
 		TEST_METHOD(CalculateTriangleAnglesFunction_TriangleAnglesDetermination_Equal90RightTriangle)
 		{
 			//Decleration
-			double angle1 = 87.0;
+			double angle1 = 90.0;
 			double angle2 = 50.0;
-			double angle3 = 43.0;
+			double angle3 = 40.0;
 			char* result;
 
 			//Calculations and Comparison
 			result = classifyTriangleByAngles(angle1, angle2, angle3);
-			Assert::AreEqual("Right Triangle", result);
+			Assert::AreEqual("Right-angled", result);
 
 		}//(15)
 
