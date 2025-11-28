@@ -250,6 +250,7 @@ namespace polygonCheckerOutcomes
 
 		}//(14)
 
+		//Testing angles (90, 50, 40) Equilateral triangle
 		TEST_METHOD(ClassifyTrianglesByAnglesFunction_TriangleAnglesDetermination_Equal90RightTriangle)
 		{
 			//Decleration
@@ -264,6 +265,7 @@ namespace polygonCheckerOutcomes
 
 		}//(15)
 
+		//Testing angles (178, 1, 1) Equilateral triangle
 		TEST_METHOD(ClassifyTrianglesByAnglesFunction_TriangleAnglesDetermination_BoundaryAnglesObtuse)
 		{
 			
@@ -279,7 +281,8 @@ namespace polygonCheckerOutcomes
 
 		}//(16)
 
-		TEST_METHOD(CalculateTriangleAnglesFunction_TriangleAnglesDetermination_UndefinedAnglesNoTriangle)
+		//Testing angles (10, 10, 10) Equilateral triangle
+		TEST_METHOD(ClassifyTrianglesByAnglesFunction_TriangleAnglesDetermination_IntegerAnglesAcute)
 		{
 
 			//Decleration
@@ -297,10 +300,6 @@ namespace polygonCheckerOutcomes
 		//TEST_METHOD(CalculateTriangleAnglesFunction_TriangleAnglesDetermination_NegativeAnglesNoTriangle)
 		//{
 		//}//(18)
-
-		//TEST_METHOD(CalculateTriangleAnglesFunction_TriangleAnglesDetermination_NegativeZeroAnglesNoTriangle)
-		//{
-		//}//(19)
 
 	};
 
