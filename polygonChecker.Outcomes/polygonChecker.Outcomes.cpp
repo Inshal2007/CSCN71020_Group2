@@ -235,7 +235,7 @@ namespace polygonCheckerOutcomes
 		}//(13)
 
 		//Testing angles (120, 30, 30) Equilateral triangle
-		TEST_METHOD(ClassifyTrianglesByAnglesFunction_TriangleAnglesDetermination_Greater90ObtuseTriangle)
+		TEST_METHOD(ClassifyTrianglesByAnglesFunction_TriangleAnglesDetermination_ObtuseTriangle)
 		{
 
 			//Decleration
@@ -264,11 +264,11 @@ namespace polygonCheckerOutcomes
 
 		}//(15)
 
-		TEST_METHOD(CalculateTriangleAnglesFunction_TriangleAnglesDetermination_AllZeroAnglesNoTriangle)
+		TEST_METHOD(ClassifyTrianglesByAnglesFunction_TriangleAnglesDetermination_BoundaryAnglesObtuse)
 		{
 			
 			//Decleration
-			double angle1 = 180;
+			double angle1 = 178;
 			double angle2 = 1;
 			double angle3 = 1;
 			char* result;
