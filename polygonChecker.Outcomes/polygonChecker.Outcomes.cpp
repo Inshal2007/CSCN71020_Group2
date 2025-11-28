@@ -228,7 +228,7 @@ namespace polygonCheckerOutcomes
 
 			//Calculations and Comparison
 			result = classifyTriangleByAngles(angle1, angle2, angle3);
-			Assert::AreEqual("Acut", result);
+			Assert::AreEqual("Acute", result);
 
 		}//(13)
 
