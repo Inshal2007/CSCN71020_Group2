@@ -264,9 +264,20 @@ namespace polygonCheckerOutcomes
 
 		}//(15)
 
-		//TEST_METHOD(CalculateTriangleAnglesFunction_TriangleAnglesDetermination_AllZeroAnglesNoTriangle)
-		//{
-		//}//(16)
+		TEST_METHOD(CalculateTriangleAnglesFunction_TriangleAnglesDetermination_AllZeroAnglesNoTriangle)
+		{
+			
+			//Decleration
+			double angle1 = 180;
+			double angle2 = 1;
+			double angle3 = 1;
+			char* result;
+
+			//Calculations and Comparison
+			result = classifyTriangleByAngles(angle1, angle2, angle3);
+			Assert::AreEqual("No Triangle", result);
+
+		}//(16)
 
 		//TEST_METHOD(CalculateTriangleAnglesFunction_TriangleAnglesDetermination_UndefinedAnglesNoTriangle)
 		//{
