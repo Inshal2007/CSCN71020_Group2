@@ -218,6 +218,8 @@ namespace polygonCheckerOutcomes
 		}//(12)
 
 		//The following 6 test methods test the classifyTriangleByAngles() function=----------------------------=
+		
+		//Testing side angles (60, 60, 60) Equilateral triangle
 		TEST_METHOD(ClasifyTriangleByAnglesFunction_DetermineTriangleByAngles_AcuteTriangle)
 		{
 			//Decleration
@@ -234,27 +236,27 @@ namespace polygonCheckerOutcomes
 
 		///TEST_METHOD(CalculateTriangleAnglesFunction_TriangleAnglesDetermination_Greater90ObtuseTriangle)
 		//{
-		//}//(15)
+		//}//(14)
 
 		//TEST_METHOD(CalculateTriangleAnglesFunction_TriangleAnglesDetermination_Equal90RightTriangle)
 		//{
-		//}//(16)
+		//}//(15)
 
 		//TEST_METHOD(CalculateTriangleAnglesFunction_TriangleAnglesDetermination_AllZeroAnglesNoTriangle)
 		//{
-		//}//(17)
+		//}//(16)
 
 		//TEST_METHOD(CalculateTriangleAnglesFunction_TriangleAnglesDetermination_UndefinedAnglesNoTriangle)
 		//{
-		//}//(18)
+		//}//(17)
 
 		//TEST_METHOD(CalculateTriangleAnglesFunction_TriangleAnglesDetermination_NegativeAnglesNoTriangle)
 		//{
-		//}//(19)
+		//}//(18)
 
 		//TEST_METHOD(CalculateTriangleAnglesFunction_TriangleAnglesDetermination_NegativeZeroAnglesNoTriangle)
 		//{
-		//}//(20)
+		//}//(19)
 
 	};
 
