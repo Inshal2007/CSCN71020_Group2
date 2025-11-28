@@ -234,9 +234,20 @@ namespace polygonCheckerOutcomes
 
 		}//(13)
 
-		///TEST_METHOD(CalculateTriangleAnglesFunction_TriangleAnglesDetermination_Greater90ObtuseTriangle)
-		//{
-		//}//(14)
+		TEST_METHOD(CalculateTriangleAnglesFunction_TriangleAnglesDetermination_Greater90ObtuseTriangle)
+		{
+
+			//Decleration
+			double angle1 = 120.0;
+			double angle2 = 30.0;
+			double angle3 = 30.0;
+			char* result;
+
+			//Calculations and Comparison
+			result = classifyTriangleByAngles(angle1, angle2, angle3);
+			Assert::AreEqual("Isosceles Triangle", result);
+
+		}//(14)
 
 		//TEST_METHOD(CalculateTriangleAnglesFunction_TriangleAnglesDetermination_Equal90RightTriangle)
 		//{
