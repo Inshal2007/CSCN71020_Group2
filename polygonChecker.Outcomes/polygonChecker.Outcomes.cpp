@@ -297,9 +297,20 @@ namespace polygonCheckerOutcomes
 
 		}//(17)
 
-		//TEST_METHOD(CalculateTriangleAnglesFunction_TriangleAnglesDetermination_NegativeAnglesNoTriangle)
-		//{
-		//}//(18)
+		TEST_METHOD(CalculateTriangleAnglesFunction_TriangleAnglesDetermination_NegativeAnglesNoTriangle)
+		{
+
+			//Decleration
+			double angle1 = -64;
+			double angle2 = -13;
+			double angle3 = -103;
+			char* result;
+
+			//Calculations and Comparison
+			result = classifyTriangleByAngles(angle1, angle2, angle3);
+			Assert::AreEqual("Obtuse", result);
+
+		}//(18)
 
 	};
 
