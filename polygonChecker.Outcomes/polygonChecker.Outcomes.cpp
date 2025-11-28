@@ -297,7 +297,7 @@ namespace polygonCheckerOutcomes
 
 		}//(17)
 
-		TEST_METHOD(CalculateTriangleAnglesFunction_TriangleAnglesDetermination_NegativeAnglesNoTriangle)
+		TEST_METHOD(ClassifyTrianglesByAnglesFunction_TriangleAnglesDetermination_NegativeAnglesNoTriangle)
 		{
 
 			//Decleration
