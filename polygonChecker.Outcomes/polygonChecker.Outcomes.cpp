@@ -308,7 +308,7 @@ namespace polygonCheckerOutcomes
 
 			//Calculations and Comparison
 			result = classifyTriangleByAngles(angle1, angle2, angle3);
-			Assert::AreEqual("Obtuse", result);
+			Assert::AreEqual("Acute", result);
 
 		}//(18)
 
