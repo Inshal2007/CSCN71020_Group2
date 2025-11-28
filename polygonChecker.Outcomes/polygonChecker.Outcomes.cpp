@@ -218,9 +218,19 @@ namespace polygonCheckerOutcomes
 		}//(12)
 
 		//The following 6 test methods test the classifyTriangleByAngles() function=----------------------------=
-		//TEST_METHOD(ClasifyTriangleByAnglesFunction_TriangleByAngles_Less90AcuteTriangle)
-		//{
-		//}//(14)
+		TEST_METHOD(ClasifyTriangleByAnglesFunction_DetermineTriangleByAngles_AcuteTriangle)
+		{
+			//Decleration
+			double angle1 = 60.0;
+			double angle2 = 60.0;
+			double angle3 = 60.0;
+			char* result;
+
+			//Calculations and Comparison
+			result = classifyTriangleByAngles(angle1, angle2, angle3);
+			Assert::AreEqual("Acut", result);
+
+		}//(13)
 
 		///TEST_METHOD(CalculateTriangleAnglesFunction_TriangleAnglesDetermination_Greater90ObtuseTriangle)
 		//{
