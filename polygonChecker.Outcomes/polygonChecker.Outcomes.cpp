@@ -218,33 +218,99 @@ namespace polygonCheckerOutcomes
 		}//(12)
 
 		//The following 6 test methods test the classifyTriangleByAngles() function=----------------------------=
-		//TEST_METHOD(ClasifyTriangleByAnglesFunction_TriangleByAngles_Less90AcuteTriangle)
-		//{
-		//}//(14)
+		
+		//Testing angles (60, 60, 60) Equilateral triangle
+		TEST_METHOD(ClassifyTrianglesByAnglesFunction_DetermineTriangleByAngles_AcuteTriangle)
+		{
+			//Decleration
+			double angle1 = 60.0;
+			double angle2 = 60.0;
+			double angle3 = 60.0;
+			char* result;
 
-		///TEST_METHOD(CalculateTriangleAnglesFunction_TriangleAnglesDetermination_Greater90ObtuseTriangle)
-		//{
-		//}//(15)
+			//Calculations and Comparison
+			result = classifyTriangleByAngles(angle1, angle2, angle3);
+			Assert::AreEqual("Acute", result);
 
-		//TEST_METHOD(CalculateTriangleAnglesFunction_TriangleAnglesDetermination_Equal90RightTriangle)
-		//{
-		//}//(16)
+		}//(13)
 
-		//TEST_METHOD(CalculateTriangleAnglesFunction_TriangleAnglesDetermination_AllZeroAnglesNoTriangle)
-		//{
-		//}//(17)
+		//Testing angles (120, 30, 30) Equilateral triangle
+		TEST_METHOD(ClassifyTrianglesByAnglesFunction_TriangleAnglesDetermination_ObtuseTriangle)
+		{
 
-		//TEST_METHOD(CalculateTriangleAnglesFunction_TriangleAnglesDetermination_UndefinedAnglesNoTriangle)
-		//{
-		//}//(18)
+			//Decleration
+			double angle1 = 120.0;
+			double angle2 = 30.0;
+			double angle3 = 30.0;
+			char* result;
 
-		//TEST_METHOD(CalculateTriangleAnglesFunction_TriangleAnglesDetermination_NegativeAnglesNoTriangle)
-		//{
-		//}//(19)
+			//Calculations and Comparison
+			result = classifyTriangleByAngles(angle1, angle2, angle3);
+			Assert::AreEqual("Obtuse", result);
 
-		//TEST_METHOD(CalculateTriangleAnglesFunction_TriangleAnglesDetermination_NegativeZeroAnglesNoTriangle)
-		//{
-		//}//(20)
+		}//(14)
+
+		//Testing angles (90, 50, 40) Equilateral triangle
+		TEST_METHOD(ClassifyTrianglesByAnglesFunction_TriangleAnglesDetermination_Equal90RightTriangle)
+		{
+			//Decleration
+			double angle1 = 90.0;
+			double angle2 = 50.0;
+			double angle3 = 40.0;
+			char* result;
+
+			//Calculations and Comparison
+			result = classifyTriangleByAngles(angle1, angle2, angle3);
+			Assert::AreEqual("Right-angled", result);
+
+		}//(15)
+
+		//Testing angles (178, 1, 1) Equilateral triangle
+		TEST_METHOD(ClassifyTrianglesByAnglesFunction_TriangleAnglesDetermination_BoundaryAnglesObtuse)
+		{
+			
+			//Decleration
+			double angle1 = 178;
+			double angle2 = 1;
+			double angle3 = 1;
+			char* result;
+
+			//Calculations and Comparison
+			result = classifyTriangleByAngles(angle1, angle2, angle3);
+			Assert::AreEqual("Obtuse", result);
+
+		}//(16)
+
+		//Testing angles (10, 10, 10) Equilateral triangle
+		TEST_METHOD(ClassifyTrianglesByAnglesFunction_TriangleAnglesDetermination_IntegerAnglesAcute)
+		{
+
+			//Decleration
+			double angle1 = 10;
+			double angle2 = 10;
+			double angle3 = 10;
+			char* result;
+
+			//Calculations and Comparison
+			result = classifyTriangleByAngles(angle1, angle2, angle3);
+			Assert::AreEqual("Acute", result);
+
+		}//(17)
+
+		TEST_METHOD(ClassifyTrianglesByAnglesFunction_TriangleAnglesDetermination_NegativeAnglesNoTriangle)
+		{
+
+			//Decleration
+			double angle1 = -64;
+			double angle2 = -13;
+			double angle3 = -103;
+			char* result;
+
+			//Calculations and Comparison
+			result = classifyTriangleByAngles(angle1, angle2, angle3);
+			Assert::AreEqual("Acute", result);
+
+		}//(18)
 
 	};
 
