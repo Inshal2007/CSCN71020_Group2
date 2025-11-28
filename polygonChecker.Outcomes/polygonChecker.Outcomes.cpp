@@ -219,7 +219,7 @@ namespace polygonCheckerOutcomes
 
 		//The following 6 test methods test the classifyTriangleByAngles() function=----------------------------=
 		
-		//Testing side angles (60, 60, 60) Equilateral triangle
+		//Testing angles (60, 60, 60) Equilateral triangle
 		TEST_METHOD(ClasifyTriangleByAnglesFunction_DetermineTriangleByAngles_AcuteTriangle)
 		{
 			//Decleration
@@ -234,6 +234,7 @@ namespace polygonCheckerOutcomes
 
 		}//(13)
 
+		//Testing angles (120, 30, 30) Equilateral triangle
 		TEST_METHOD(CalculateTriangleAnglesFunction_TriangleAnglesDetermination_Greater90ObtuseTriangle)
 		{
 
