@@ -110,17 +110,17 @@ int printShapeMenu() {
 
     // Input validation loop - ensures valid menu selection
     while (1) {
-       
+
         // Read entire line as string to capture all user input
         if (fgets(inputBuffer, sizeof(inputBuffer), stdin) != NULL) {
-            
+
             // Try to convert to integer and check for extra content after the number
             char extraContent[100];
             int conversionResult = sscanf_s(inputBuffer, "%d %s", &shapeChoice, extraContent, (unsigned)sizeof(extraContent));
-            
+
             // Valid input: conversion successful, no extra content, and within valid range
             if (conversionResult == 1 && shapeChoice >= 0 && shapeChoice <= 2) {
-           
+
                 return shapeChoice; // Valid input - return the choice
             }
         }
