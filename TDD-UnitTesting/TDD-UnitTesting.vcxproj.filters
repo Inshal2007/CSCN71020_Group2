@@ -30,6 +30,9 @@
     <ClCompile Include="..\PolygonChecker\rectangleSolver.c">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="RectangleTest.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h">
