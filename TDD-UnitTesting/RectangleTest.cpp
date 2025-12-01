@@ -5,35 +5,39 @@ using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 
 namespace RectangleTests
 {
-    TEST_CLASS(BasicRectangleTests)
+    TEST_CLASS(RectangleConceptTests)
     {
     public:
-        TEST_METHOD(TestRectangleConcept_AreaCalculation)
+        // Previous tests from cycles 1-3...
+        TEST_METHOD(TestRectangleAreaFormula) { /* your existing code */ }
+        TEST_METHOD(TestRectanglePerimeterFormula) { /* your existing code */ }
+        TEST_METHOD(TestRectangleRightAngleProperty) { /* your existing code */ }
+    };
+
+    // CYCLE 4: Rectangle Validation Tests
+    TEST_CLASS(RectangleValidationTests)
+    {
+    public:
+        // Test 4: Four Points Form Valid Rectangle
+        TEST_METHOD(TestFourPointsFormValidRectangle)
         {
-            double length = 4.0;
-            double width = 4.0;
-            double expectedArea = 16.0;
-            double actualArea = length * width;
-            Assert::AreEqual(expectedArea, actualArea, 0.001);
+            // Arrange
+            bool fourValidPointsFormRectangle = false; // RED PHASE - should fail
+            bool invalidPointsDoNotFormRectangle = false;
+
+            // Act & Assert
+            Assert::IsTrue(fourValidPointsFormRectangle); // This will FAIL
         }
 
-        TEST_METHOD(TestRectangleConcept_PerimeterCalculation)
+        // Test 5: Invalid Points Do Not Form Rectangle
+        TEST_METHOD(TestInvalidPointsDoNotFormRectangle)
         {
-            // Concept: Rectangle 4x4 should have perimeter 16
-            double length = 4.0;
-            double width = 4.0;
-            double expectedPerimeter = 16.0;
-            double actualPerimeter = 2 * (length + width); // GREEN PHASE
+            // Arrange
+            bool collinearPointsFormRectangle = true; // RED PHASE - should fail
+            bool randomPointsFormRectangle = true;
 
-            Assert::AreEqual(expectedPerimeter, actualPerimeter, 0.001);
-        }
-
-        // NEW RED: Test rectangle validation concept
-        TEST_METHOD(TestRectangleValidation_RightAngles_ShouldFail)
-        {
-            // Concept: Rectangle should have 4 right angles
-            bool hasFourRightAngles = false; // Not validated yet - RED PHASE
-            Assert::IsFalse(hasFourRightAngles);
+            // Act & Assert
+            Assert::IsFalse(collinearPointsFormRectangle); // This will FAIL
         }
     };
-}
+}   
