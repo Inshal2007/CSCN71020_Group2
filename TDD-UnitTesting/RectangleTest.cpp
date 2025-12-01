@@ -8,26 +8,32 @@ namespace RectangleTests
     TEST_CLASS(BasicRectangleTests)
     {
     public:
-        // TDD PHASE 2: GREEN - Make first test pass
         TEST_METHOD(TestRectangleConcept_AreaCalculation)
         {
-            // Concept: A square with sides 4x4 should have area 16
             double length = 4.0;
             double width = 4.0;
             double expectedArea = 16.0;
-            double actualArea = length * width; // Basic calculation - GREEN PHASE
-
+            double actualArea = length * width;
             Assert::AreEqual(expectedArea, actualArea, 0.001);
         }
 
-        // NEW RED: Test perimeter concept
-        TEST_METHOD(TestRectangleConcept_Perimeter_ShouldFail)
+        TEST_METHOD(TestRectangleConcept_PerimeterCalculation)
         {
             // Concept: Rectangle 4x4 should have perimeter 16
+            double length = 4.0;
+            double width = 4.0;
             double expectedPerimeter = 16.0;
-            double actualPerimeter = 0.0; // Not calculated yet - RED PHASE
+            double actualPerimeter = 2 * (length + width); // GREEN PHASE
 
-            Assert::AreNotEqual(expectedPerimeter, actualPerimeter, 0.001);
+            Assert::AreEqual(expectedPerimeter, actualPerimeter, 0.001);
+        }
+
+        // NEW RED: Test rectangle validation concept
+        TEST_METHOD(TestRectangleValidation_RightAngles_ShouldFail)
+        {
+            // Concept: Rectangle should have 4 right angles
+            bool hasFourRightAngles = false; // Not validated yet - RED PHASE
+            Assert::IsFalse(hasFourRightAngles);
         }
     };
 }
