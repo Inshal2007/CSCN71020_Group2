@@ -12,11 +12,11 @@ namespace polygonCheckerOutcomes
 	TEST_CLASS(triangleFeatures)
 	{
 	public:
-
+		
 		//The following 6 test methods test the analyzeTriangle() function=----------------------------=
 
 		//Testing side lengths with values (0, 0, 0)
-		TEST_METHOD(AnalyzeTriangleFunction_AnalyzeTriangleType_NotATriangleResult)
+		TEST_METHOD(AnalyzeTriangleFunction_AnalyzeTriangleType_NotATriangleResult) 
 		{
 			//Decleration
 			int side1 = 0;
@@ -33,7 +33,7 @@ namespace polygonCheckerOutcomes
 		//Testing side lengths with values (10, 10, 10)
 		TEST_METHOD(AnalyzeTriangleFunction_AnalyzeTriangleType_EquilateralTriangleResult)
 		{
-			//Decleration
+		    //Decleration
 			int side1 = 10;
 			int side2 = 10;
 			int side3 = 10;
@@ -56,7 +56,7 @@ namespace polygonCheckerOutcomes
 
 			//Calculations and Comparison
 			result = analyzeTriangle(side1, side2, side3);
-			Assert::AreEqual("Isosceles triangle", result);
+			Assert::AreEqual("Isosceles triangle", result);	 
 
 		}//(3)
 
@@ -121,7 +121,7 @@ namespace polygonCheckerOutcomes
 		}//(7)
 
 		//The following 6 test methods test the calculateTriangle() function=----------------------------=
-
+		
 		//Testing side lengths with values (10, 10, 10) for an equilateral triangle
 		TEST_METHOD(CalculateTriangleAnglesFunction_TriangleAnglesDetermination_EquilateralCase)
 		{
@@ -195,7 +195,7 @@ namespace polygonCheckerOutcomes
 			Assert::AreEqual(0.0057301, angle1, 0.01);
 			Assert::AreEqual(89.9971, angle2, 0.01);
 			Assert::AreEqual(89.9971, angle3, 0.01);
-
+		
 		}//(11)
 
 		//Testing side lengths with values (9.4732, 12.43, 4.2) for an Isosceles triangle
@@ -218,7 +218,7 @@ namespace polygonCheckerOutcomes
 		}//(12)
 
 		//The following 6 test methods test the classifyTriangleByAngles() function=----------------------------=
-
+		
 		//Testing angles (60, 60, 60) Equilateral triangle
 		TEST_METHOD(ClassifyTrianglesByAnglesFunction_DetermineTriangleByAngles_AcuteTriangle)
 		{
@@ -268,7 +268,7 @@ namespace polygonCheckerOutcomes
 		//Testing angles (178, 1, 1) Equilateral triangle
 		TEST_METHOD(ClassifyTrianglesByAnglesFunction_TriangleAnglesDetermination_BoundaryAnglesObtuse)
 		{
-
+			
 			//Decleration
 			double angle1 = 178;
 			double angle2 = 1;

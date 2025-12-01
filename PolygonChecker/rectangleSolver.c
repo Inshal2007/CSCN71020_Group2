@@ -111,7 +111,7 @@ void sortPointsByCorner(Point points[]) {
     int topRightIndex = findTopRightIndex(points, topLeftIndex);
     sortedPoints[1] = points[topRightIndex];
 
-    int remainingIndices[2];
+    int remainingIndices[2] = { 0, 0 };  // Initialize to zero
     int count = 0;
     for (int i = 0; i < 4; i++) {
         if (i != topLeftIndex && i != topRightIndex) {
